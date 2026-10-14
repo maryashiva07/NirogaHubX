@@ -1,11 +1,21 @@
-const { createClient } = require("redis");
 
+const { createClient } = require("redis");
 require("dotenv").config();
 
 const redisClient = createClient({
+  username: process.env.REDIS_USERNAME || "default",
+  password: process.env.REDIS_PASSWORD,
   socket: {
     host: process.env.REDIS_HOST,
-    port: Number(process.env.REDIS_PORT),
+    port: Number(process.env.REDIS_PORT || 6379),
+    tls: true,
+    reconnectStrategy: (retries) => {
+      if (retries > 10) {
+        return new Error("Redis reconnect limit reached");
+      }
+
+      return Math.min(retries * 500, 5000);
+    },
   },
 });
 
@@ -27,10 +37,8 @@ const connectRedis = async () => {
       await redisClient.connect();
     }
   } catch (error) {
-    console.error("Redis connection failed");
-    console.error(error.message);
-
-    process.exit(1);
+    console.error("Redis connection failed:", error.message);
+    throw error;
   }
 };
 
