@@ -1,0 +1,394 @@
+.doctor-auth-page {
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 16px;
+
+  box-sizing: border-box;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(255, 255, 255, 0.5),
+      transparent 35%
+    ),
+    linear-gradient(135deg, #ffd9e7 0%, #f9bfd5 50%, #f5aeca 100%);
+}
+
+/* CARD */
+
+.doctor-auth-card {
+  width: min(440px, 100%);
+
+  max-height: calc(100dvh - 32px);
+
+  padding: 24px 30px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  border: 1px solid rgba(255, 255, 255, 0.9);
+
+  border-radius: 24px;
+
+  box-shadow: 0 18px 50px rgba(150, 50, 90, 0.16);
+}
+
+/* BRAND */
+
+.doctor-auth-brand {
+  text-align: center;
+
+  margin-bottom: 16px;
+}
+
+.doctor-auth-icon {
+  width: 42px;
+  height: 42px;
+
+  margin: 0 auto 6px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #ffe3ed;
+
+  color: #d93670;
+
+  font-size: 25px;
+}
+
+.doctor-auth-brand h1 {
+  margin: 0;
+
+  color: #d93670;
+
+  font-size: 25px;
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.doctor-auth-brand p {
+  margin: 3px 0 0;
+
+  color: #777;
+
+  font-size: 11px;
+}
+
+/* HEADING */
+
+.doctor-auth-heading {
+  text-align: center;
+
+  margin-bottom: 16px;
+}
+
+.doctor-auth-heading h2 {
+  margin: 0 0 5px;
+
+  color: #29202a;
+
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.doctor-auth-heading p {
+  margin: 0 auto;
+
+  max-width: 340px;
+
+  color: #777;
+
+  font-size: 12px;
+
+  line-height: 1.4;
+}
+
+/* ERROR */
+
+.doctor-auth-error {
+  margin-bottom: 12px;
+
+  padding: 8px 10px;
+
+  border-radius: 8px;
+
+  background: #ffe7ed;
+
+  color: #c62855;
+
+  font-size: 11px;
+
+  text-align: center;
+}
+
+/* FORM */
+
+.doctor-auth-form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 11px;
+}
+
+.doctor-form-group {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.doctor-form-group label {
+  color: #40343b;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.doctor-form-group input {
+  width: 100%;
+
+  height: 42px;
+
+  padding: 0 12px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #ead4dd;
+
+  border-radius: 10px;
+
+  background: #fff;
+
+  color: #29202a;
+
+  font-size: 13px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.doctor-form-group input::placeholder {
+  color: #aaa;
+}
+
+.doctor-form-group input:focus {
+  border-color: #d93670;
+
+  box-shadow: 0 0 0 3px rgba(217, 54, 112, 0.08);
+}
+
+/* BUTTON */
+
+.doctor-auth-submit {
+  width: 100%;
+
+  height: 43px;
+
+  margin-top: 3px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: linear-gradient(135deg, #d93670, #c82f66);
+
+  color: #fff;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.doctor-auth-submit:hover {
+  transform: translateY(-1px);
+
+  box-shadow: 0 7px 18px rgba(201, 47, 102, 0.22);
+}
+
+.doctor-auth-submit:disabled {
+  opacity: 0.65;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+/* SWITCH */
+
+.doctor-auth-switch {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  margin-top: 13px;
+
+  color: #777;
+
+  font-size: 12px;
+}
+
+.doctor-auth-switch button {
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #d93670;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+/* BACK */
+
+.doctor-back-button {
+  display: block;
+
+  margin: 12px auto 0;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #888;
+
+  font-size: 11px;
+
+  cursor: pointer;
+}
+
+.doctor-back-button:hover {
+  color: #d93670;
+}
+
+/* MOBILE*/
+
+@media (max-width: 480px) {
+  .doctor-auth-page {
+    padding: 10px;
+  }
+
+  .doctor-auth-card {
+    width: 100%;
+
+    max-height: calc(100dvh - 20px);
+
+    padding: 20px 18px;
+
+    border-radius: 20px;
+  }
+
+  .doctor-auth-brand {
+    margin-bottom: 12px;
+  }
+
+  .doctor-auth-heading {
+    margin-bottom: 13px;
+  }
+
+  .doctor-auth-heading h2 {
+    font-size: 18px;
+  }
+
+  .doctor-auth-heading p {
+    font-size: 11px;
+  }
+
+  .doctor-auth-form {
+    gap: 9px;
+  }
+
+  .doctor-form-group input {
+    height: 40px;
+  }
+
+  .doctor-auth-submit {
+    height: 41px;
+  }
+
+  .doctor-auth-switch {
+    margin-top: 11px;
+  }
+
+  .doctor-back-button {
+    margin-top: 10px;
+  }
+}
+
+/* VERY SMALL PHONES */
+
+@media (max-height: 650px) {
+  .doctor-auth-card {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  .doctor-auth-icon {
+    width: 34px;
+    height: 34px;
+
+    font-size: 21px;
+  }
+
+  .doctor-auth-brand h1 {
+    font-size: 21px;
+  }
+
+  .doctor-auth-brand {
+    margin-bottom: 8px;
+  }
+
+  .doctor-auth-heading {
+    margin-bottom: 9px;
+  }
+
+  .doctor-auth-form {
+    gap: 7px;
+  }
+
+  .doctor-form-group input {
+    height: 37px;
+  }
+
+  .doctor-auth-submit {
+    height: 38px;
+  }
+
+  .doctor-auth-switch {
+    margin-top: 8px;
+  }
+
+  .doctor-back-button {
+    margin-top: 7px;
+  }
+}

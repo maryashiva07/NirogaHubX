@@ -1,0 +1,180 @@
+.pending-patients-page {
+  min-height: 100vh;
+  background: #fff8f5;
+  padding-bottom: 90px;
+}
+
+.pending-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 30px;
+  background: #fff0df;
+  border-bottom: 1px solid #f2d6c1;
+}
+
+.pending-header button {
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  color: #d96b19;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.pending-header h1 {
+  margin: 0;
+  color: #222;
+}
+
+.pending-header p {
+  margin: 5px 0 0;
+  color: #777;
+}
+
+.pending-content {
+  max-width: 1100px;
+  margin: auto;
+  padding: 30px;
+}
+
+.pending-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: 25px;
+  background: #fff0bf;
+  color: #946c00;
+  margin-bottom: 25px;
+}
+
+.pending-count strong {
+  font-size: 22px;
+}
+
+.pending-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.pending-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px;
+  background: white;
+  border-radius: 18px;
+  border: 1px solid #f0dfd4;
+}
+
+.pending-card img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.pending-info {
+  flex: 1;
+}
+
+.pending-info h3 {
+  margin: 0 0 5px;
+  color: #222;
+}
+
+.pending-info p {
+  margin: 0 0 4px;
+  color: #d91870;
+}
+
+.pending-info small {
+  color: #888;
+}
+
+.pending-badge {
+  padding: 8px 15px;
+  border-radius: 20px;
+  background: #fff0bf;
+  color: #946c00;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.pending-card button {
+  border: none;
+  background: #e91e75;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.pending-empty {
+  text-align: center;
+  padding: 80px 20px;
+  color: #777;
+}
+
+.pending-empty span {
+  font-size: 45px;
+}
+
+.doctor-bottom-navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  background: white;
+  border-top: 1px solid #ead6df;
+  z-index: 100;
+}
+
+.doctor-bottom-navigation button {
+  min-width: 90px;
+  border: none;
+  background: transparent;
+  color: #777;
+  cursor: pointer;
+}
+
+.doctor-bottom-navigation button span {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+}
+
+@media (max-width: 700px) {
+  .pending-content {
+    padding: 18px;
+  }
+
+  .pending-card {
+    flex-wrap: wrap;
+  }
+
+  .pending-info {
+    min-width: 150px;
+  }
+
+  .pending-badge {
+    margin-left: auto;
+  }
+
+  .pending-card button {
+    width: 100%;
+  }
+
+  .doctor-bottom-navigation {
+    gap: 10px;
+    justify-content: space-around;
+  }
+}

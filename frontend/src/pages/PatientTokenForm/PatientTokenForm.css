@@ -1,0 +1,273 @@
+.patient-token-page {
+  min-height: 100vh;
+  background: #ffe6f0;
+  padding: 30px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.patient-token-card {
+  width: 100%;
+  max-width: 560px;
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.token-back-button {
+  border: none;
+  background: transparent;
+  color: #d63384;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 18px;
+}
+
+.token-page-header {
+  margin-bottom: 20px;
+}
+
+.token-page-header h1 {
+  margin: 0;
+  color: #252525;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.token-page-header p {
+  margin: 7px 0 0;
+  color: #777;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.selected-doctor {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #fff1f6;
+  border: 1px solid #ffd2e3;
+  border-radius: 16px;
+  padding: 12px;
+  margin-bottom: 22px;
+}
+
+.selected-doctor img {
+  width: 62px;
+  height: 62px;
+  border-radius: 14px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.selected-doctor h3 {
+  margin: 0 0 4px;
+  color: #252525;
+  font-size: 17px;
+}
+
+.selected-doctor p {
+  margin: 0 0 3px;
+  color: #d63384;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.selected-doctor span {
+  color: #777;
+  font-size: 12px;
+}
+
+.patient-token-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-group label {
+  color: #333;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #dddddd;
+  border-radius: 11px;
+  padding: 12px 13px;
+  outline: none;
+  font-family: inherit;
+  font-size: 14px;
+  background: #ffffff;
+  transition: 0.2s ease;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #d63384;
+  box-shadow: 0 0 0 3px rgba(214, 51, 132, 0.08);
+}
+
+.token-payment-box {
+  background: #fff7fa;
+  border: 1px solid #ffd5e5;
+  border-radius: 14px;
+  padding: 14px;
+  margin-top: 2px;
+}
+
+.token-payment-box div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.token-payment-box span {
+  color: #444;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.token-payment-box strong {
+  color: #d63384;
+  font-size: 22px;
+}
+
+.token-payment-box small {
+  display: block;
+  color: #888;
+  font-size: 11px;
+  margin-top: 5px;
+  line-height: 1.4;
+}
+
+.generate-token-button {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  background: #d63384;
+  color: #ffffff;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.generate-token-button:hover {
+  background: #c22573;
+}
+
+.generate-token-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.token-error {
+  background: #fff0f0;
+  color: #d32f2f;
+  border: 1px solid #ffcaca;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 13px;
+}
+
+.patient-token-loading {
+  width: 100%;
+  max-width: 560px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 40px;
+  text-align: center;
+  color: #d63384;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .patient-token-page {
+    padding: 15px 10px;
+  }
+
+  .patient-token-card {
+    padding: 18px 15px;
+    border-radius: 18px;
+  }
+
+  .token-page-header h1 {
+    font-size: 22px;
+  }
+
+  .selected-doctor {
+    padding: 10px;
+  }
+
+  .selected-doctor img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 11px;
+  }
+}
+
+@media (max-width: 380px) {
+  .patient-token-card {
+    padding: 15px 12px;
+  }
+
+  .token-page-header h1 {
+    font-size: 20px;
+  }
+
+  .selected-doctor h3 {
+    font-size: 15px;
+  }
+
+  .selected-doctor p {
+    font-size: 12px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .patient-token-page {
+    padding-top: 45px;
+  }
+}

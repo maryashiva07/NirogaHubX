@@ -1,0 +1,298 @@
+.role-card {
+  width: 100%;
+
+  min-height: 0;
+
+  flex: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  padding: 6px;
+
+  border-radius: 20px;
+
+  border: 1px solid;
+
+  box-shadow: 0 4px 15px rgba(50, 20, 50, 0.07);
+}
+
+.role-card.patient {
+  background: linear-gradient(135deg, #fff0f7, #ffdeec);
+
+  border-color: #f2b4d0;
+}
+
+.role-card.doctor {
+  background: linear-gradient(135deg, #eff8ff, #dcefff);
+
+  border-color: #b8ddfb;
+}
+
+.role-image {
+  width: 36%;
+
+  height: 100%;
+
+  min-height: 95px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.role-image img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: contain;
+
+  object-position: bottom center;
+
+  display: block;
+
+  /* border-radius: 50%;
+    background: black; */
+}
+
+.role-content {
+  flex: 1;
+
+  min-width: 0;
+
+  padding: 0 6px 0 5px;
+}
+
+.role-heading {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 5px;
+}
+
+.role-heading h3 {
+  margin: 0;
+
+  font-size: 19px;
+
+  line-height: 1.1;
+
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+.patient .role-heading h3 {
+  color: #a3005b;
+}
+
+.doctor .role-heading h3 {
+  color: #124879;
+}
+
+.card-arrow {
+  width: 32px;
+
+  height: 32px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  font-size: 27px;
+
+  line-height: 1;
+}
+
+.patient .card-arrow {
+  background: #ffd0e2;
+
+  color: #b30061;
+}
+
+.doctor .card-arrow {
+  background: #d2e9fc;
+
+  color: #075793;
+}
+
+.role-content p {
+  margin: 4px 0 7px;
+
+  font-size: 11px;
+
+  line-height: 1.25;
+
+  color: #34343d;
+}
+
+.role-button {
+  width: 100%;
+
+  border: none;
+
+  border-radius: 30px;
+
+  padding: 7px 8px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 6px;
+
+  color: white;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.15s ease,
+    opacity 0.15s ease;
+}
+
+.role-button:hover {
+  opacity: 0.93;
+
+  transform: translateY(-1px);
+}
+
+.role-button:active {
+  transform: scale(0.98);
+}
+
+.patient .role-button {
+  background: linear-gradient(90deg, #df237b, #c90064);
+}
+
+.doctor .role-button {
+  background: linear-gradient(90deg, #2389df, #0873ca);
+}
+
+.button-arrow {
+  font-size: 16px;
+
+  line-height: 1;
+}
+
+@media (max-width: 390px) {
+  .role-card {
+    padding: 5px;
+
+    border-radius: 16px;
+  }
+
+  .role-image {
+    width: 34%;
+
+    min-height: 70px;
+  }
+
+  .role-heading h3 {
+    font-size: 14px;
+  }
+
+  .card-arrow {
+    width: 25px;
+
+    height: 25px;
+
+    font-size: 22px;
+  }
+
+  .role-content p {
+    margin: 3px 0 5px;
+
+    font-size: 8px;
+
+    line-height: 1.2;
+  }
+
+  .role-button {
+    padding: 5px;
+
+    font-size: 8px;
+
+    gap: 4px;
+  }
+
+  .button-arrow {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 601px) {
+  .role-card {
+    min-height: 170px;
+
+    padding: 10px;
+
+    border-radius: 24px;
+  }
+
+  .role-image {
+    width: 38%;
+  }
+
+  .role-heading h3 {
+    font-size: 22px;
+  }
+
+  .role-content p {
+    font-size: 13px;
+
+    line-height: 1.35;
+  }
+
+  .role-button {
+    font-size: 13px;
+
+    padding: 9px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .role-card {
+    min-height: 175px;
+  }
+
+  .role-heading h3 {
+    font-size: 24px;
+  }
+
+  .role-content p {
+    font-size: 14px;
+  }
+
+  .role-button {
+    font-size: 14px;
+
+    padding: 10px;
+  }
+}

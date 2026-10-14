@@ -1,0 +1,234 @@
+.patient-view-page {
+  min-height: 100vh;
+  background: #fff7fb;
+  color: #17133d;
+  padding-bottom: 30px;
+}
+
+.patient-record-header {
+  height: 78px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 0 28px;
+  background: #ffeaf5;
+  border-bottom: 1px solid #f6d3e5;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.patient-record-header button {
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  color: #e91e78;
+  font-size: 25px;
+  cursor: pointer;
+  box-shadow: 0 3px 12px rgba(100, 30, 70, 0.08);
+}
+
+.patient-record-header h1 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.patient-view-content {
+  width: min(100% - 40px, 1000px);
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.patient-profile-card {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 25px;
+  background: white;
+  border: 1px solid #f2d8e6;
+  border-radius: 22px;
+  box-shadow: 0 8px 25px rgba(100, 30, 70, 0.07);
+}
+
+.patient-profile-card > img {
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #ffd4e7;
+  background: #fff0f7;
+}
+
+.patient-profile-card h2 {
+  margin: 0 0 8px;
+  font-size: 27px;
+  font-weight: 800;
+}
+
+.patient-profile-card p {
+  margin: 0;
+  color: #706b82;
+  font-size: 15px;
+}
+
+.patient-info-card {
+  background: white;
+  padding: 25px;
+  border: 1px solid #f2d8e6;
+  border-radius: 22px;
+  box-shadow: 0 8px 25px rgba(100, 30, 70, 0.06);
+}
+
+.patient-info-card h2 {
+  margin: 0 0 20px;
+  font-size: 20px;
+}
+
+.patient-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.patient-info-grid > div {
+  padding: 16px;
+  border-radius: 14px;
+  background: #fff7fb;
+  border: 1px solid #f5dce9;
+}
+
+.patient-info-grid span {
+  display: block;
+  margin-bottom: 6px;
+  color: #898293;
+  font-size: 13px;
+}
+
+.patient-info-grid strong {
+  display: block;
+  color: #29233f;
+  font-size: 15px;
+  word-break: break-word;
+}
+
+.latest-visit {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.latest-visit p {
+  margin: 0;
+  padding: 14px;
+  background: #fff7fb;
+  border-radius: 12px;
+  color: #5d586c;
+}
+
+.latest-visit strong {
+  color: #25203a;
+}
+
+.patient-record-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.patient-record-actions button {
+  height: 52px;
+  border: none;
+  border-radius: 14px;
+  background: #ed3b86;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.patient-record-actions button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(237, 59, 134, 0.22);
+}
+
+.patient-record-actions button:last-child {
+  background: #8755df;
+}
+
+.patient-record-loading,
+.patient-record-error {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  background: #fff7fb;
+  color: #28213f;
+  text-align: center;
+  padding: 20px;
+}
+
+.patient-record-error button {
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  background: #ed3b86;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .patient-record-header {
+    height: 68px;
+    padding: 0 16px;
+  }
+
+  .patient-record-header h1 {
+    font-size: 20px;
+  }
+
+  .patient-view-content {
+    width: calc(100% - 24px);
+    margin: 18px auto;
+    gap: 15px;
+  }
+
+  .patient-profile-card {
+    padding: 18px;
+    gap: 15px;
+  }
+
+  .patient-profile-card > img {
+    width: 78px;
+    height: 78px;
+  }
+
+  .patient-profile-card h2 {
+    font-size: 21px;
+  }
+
+  .patient-info-card {
+    padding: 18px;
+  }
+
+  .patient-info-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .latest-visit {
+    grid-template-columns: 1fr;
+  }
+
+  .patient-record-actions {
+    grid-template-columns: 1fr;
+  }
+}

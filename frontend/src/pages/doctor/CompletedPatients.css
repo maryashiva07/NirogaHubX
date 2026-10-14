@@ -1,0 +1,181 @@
+.completed-patients-page {
+  min-height: 100vh;
+  background: #f7fff9;
+  padding-bottom: 90px;
+}
+
+.completed-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 30px;
+  background: #e8faee;
+  border-bottom: 1px solid #ccebd6;
+}
+
+.completed-header button {
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  color: #168244;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.completed-header h1 {
+  margin: 0;
+  color: #173c27;
+}
+
+.completed-header p {
+  margin: 5px 0 0;
+  color: #777;
+}
+
+.completed-content {
+  max-width: 1100px;
+  margin: auto;
+  padding: 30px;
+}
+
+.completed-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: 25px;
+  background: #dff7e7;
+  color: #168244;
+  margin-bottom: 25px;
+}
+
+.completed-count strong {
+  font-size: 22px;
+}
+
+.completed-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.completed-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px;
+  background: white;
+  border-radius: 18px;
+  border: 1px solid #dceee2;
+}
+
+.completed-card img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.completed-info {
+  flex: 1;
+}
+
+.completed-info h3 {
+  margin: 0 0 5px;
+  color: #222;
+}
+
+.completed-info p {
+  margin: 0 0 4px;
+  color: #168244;
+}
+
+.completed-info small {
+  color: #888;
+}
+
+.completed-badge {
+  padding: 8px 15px;
+  border-radius: 20px;
+  background: #dff7e7;
+  color: #168244;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.completed-card button {
+  border: none;
+  background: #e91e75;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.completed-empty {
+  text-align: center;
+  padding: 80px 20px;
+  color: #777;
+}
+
+.completed-empty span {
+  font-size: 45px;
+  color: #168244;
+}
+
+.doctor-bottom-navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  background: white;
+  border-top: 1px solid #ead6df;
+  z-index: 100;
+}
+
+.doctor-bottom-navigation button {
+  min-width: 90px;
+  border: none;
+  background: transparent;
+  color: #777;
+  cursor: pointer;
+}
+
+.doctor-bottom-navigation button span {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+}
+
+@media (max-width: 700px) {
+  .completed-content {
+    padding: 18px;
+  }
+
+  .completed-card {
+    flex-wrap: wrap;
+  }
+
+  .completed-info {
+    min-width: 150px;
+  }
+
+  .completed-badge {
+    margin-left: auto;
+  }
+
+  .completed-card button {
+    width: 100%;
+  }
+
+  .doctor-bottom-navigation {
+    gap: 10px;
+    justify-content: space-around;
+  }
+}

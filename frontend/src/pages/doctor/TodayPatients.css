@@ -1,0 +1,219 @@
+.today-patients-page {
+  min-height: 100vh;
+  background: #fff7fb;
+  padding-bottom: 90px;
+}
+
+.today-patients-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 30px;
+  background: #ffe8f2;
+  border-bottom: 1px solid #f6cddd;
+}
+
+.today-patients-header h1 {
+  margin: 0;
+  color: #15153a;
+  font-size: 28px;
+}
+
+.today-patients-header p {
+  margin: 5px 0 0;
+  color: #777;
+}
+
+.today-back-button {
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  color: #d91870;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.today-patients-content {
+  max-width: 1100px;
+  margin: auto;
+  padding: 30px;
+}
+
+.today-patients-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border-radius: 30px;
+  background: #ffd8e9;
+  color: #d91870;
+  margin-bottom: 25px;
+}
+
+.today-patients-count strong {
+  font-size: 20px;
+}
+
+.today-patients-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.today-patient-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px;
+  background: white;
+  border: 1px solid #f1d6e2;
+  border-radius: 18px;
+  box-shadow: 0 4px 14px rgba(100, 40, 80, 0.06);
+}
+
+.today-patient-card img {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ffd1e3;
+}
+
+.today-patient-info {
+  flex: 1;
+}
+
+.today-patient-info h3 {
+  margin: 0 0 6px;
+  color: #1b1b3a;
+  font-size: 18px;
+}
+
+.today-patient-info p {
+  margin: 0 0 5px;
+  color: #666;
+}
+
+.today-patient-info p span {
+  margin: 0 8px;
+}
+
+.today-patient-info small {
+  color: #d91870;
+}
+
+.today-status {
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  background: #fff0bf;
+  color: #936900;
+}
+
+.today-status.completed {
+  background: #dff7e7;
+  color: #168244;
+}
+
+.today-status.cancelled {
+  background: #ffe1e1;
+  color: #c52828;
+}
+
+.today-patient-card button {
+  border: none;
+  background: #e91e75;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.today-loading,
+.today-empty {
+  text-align: center;
+  padding: 80px 20px;
+  color: #777;
+}
+
+.today-empty span {
+  font-size: 45px;
+}
+
+.today-empty h2 {
+  color: #222;
+}
+
+.doctor-bottom-navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  background: white;
+  border-top: 1px solid #ead6df;
+  z-index: 100;
+}
+
+.doctor-bottom-navigation button {
+  min-width: 90px;
+  border: none;
+  background: transparent;
+  color: #777;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.doctor-bottom-navigation button span {
+  font-size: 12px;
+}
+
+.doctor-bottom-navigation button.active {
+  color: #d91870;
+}
+
+@media (max-width: 700px) {
+  .today-patients-header {
+    padding: 18px;
+  }
+
+  .today-patients-header h1 {
+    font-size: 22px;
+  }
+
+  .today-patients-content {
+    padding: 18px;
+  }
+
+  .today-patient-card {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .today-patient-info {
+    min-width: 150px;
+  }
+
+  .today-status {
+    margin-left: auto;
+  }
+
+  .today-patient-card button {
+    width: 100%;
+  }
+
+  .doctor-bottom-navigation {
+    gap: 10px;
+    justify-content: space-around;
+  }
+}
