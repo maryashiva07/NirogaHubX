@@ -542,3 +542,72 @@
   margin-left: -8px;
   border: 2px solid pink;
 }
+
+
+
+
+
+
+/* changes */
+
+
+/* Layout fixes — existing hero-doctor styling stays unchanged */
+
+/* Prevent flex children from overflowing their parent */
+.brand,
+.hero-section,
+.welcome,
+.roles,
+.priority {
+  min-width: 0;
+}
+
+/* Keep the hero image and background centered */
+.hero-section {
+  isolation: isolate;
+}
+
+.hero-bg {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Allow role cards to shrink without forcing overflow */
+.roles {
+  flex-shrink: 1;
+}
+
+/* Short screens: make the page scroll if content needs more room */
+@media (max-height: 650px) {
+  .role-page {
+    height: auto;
+    min-height: 100dvh;
+    overflow-y: auto;
+  }
+
+  .role-page-inner {
+    height: auto;
+    min-height: 100dvh;
+    overflow: visible;
+  }
+
+  .roles {
+    flex: 0 0 auto;
+  }
+
+  .bottom-waves {
+    position: fixed;
+  }
+}
+
+/* Avoid horizontal overflow on small phones */
+@media (max-width: 390px) {
+  .role-page-inner {
+    width: 100%;
+  }
+
+  .roles {
+    width: 100%;
+  }
+}
+
