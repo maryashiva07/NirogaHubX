@@ -38,7 +38,7 @@ const startServer = async () => {
 
     await connectRedis();
 
-    server.listen(PORT, () => {
+    server.listen(PORT, "0.0.0.0", () => {
       console.log(`NirogaHub server running on port ${PORT}`);
       console.log(`Socket.IO running on port ${PORT}`);
     });
