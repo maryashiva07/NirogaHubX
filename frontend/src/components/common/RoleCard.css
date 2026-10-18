@@ -3,7 +3,7 @@
 
   min-height: 0;
 
-  flex: 1;
+  flex: 1 1 0;
 
   display: flex;
 
@@ -294,5 +294,11 @@
     font-size: 14px;
 
     padding: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .role-card {
+    flex: 0 0 auto;
   }
 }
