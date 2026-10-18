@@ -1,4 +1,505 @@
+
+/* =========================================
+   NIROGAHUB — ROLE SELECTION
+   Responsive, modern healthcare UI
+========================================= */
+
 .role-page,
+.role-page * {
+  box-sizing: border-box;
+}
+
+.role-page {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  min-height: 100dvh;
+  height: 100dvh;
+  overflow: hidden;
+  color: #171722;
+  background:
+    radial-gradient(ellipse at 8% 35%, rgba(255, 218, 237, 0.45), transparent 42%),
+    linear-gradient(180deg, #fffafd 0%, #fff7fb 56%, #ffedf6 100%);
+  font-family: inherit;
+}
+
+.role-page-inner {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 10px 14px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* BRAND */
+
+.brand {
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.heart-logo {
+  position: relative;
+  width: 58px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heart-logo span {
+  position: absolute;
+  font-size: 54px;
+  line-height: 1;
+  color: #ed176f;
+  filter: drop-shadow(0 4px 5px rgba(210, 0, 90, 0.15));
+}
+
+.heartbeat {
+  position: relative;
+  z-index: 2;
+  margin-top: 3px;
+  color: white;
+  font-size: 22px;
+  font-weight: 900;
+  transform: rotate(-5deg);
+}
+
+.brand h1 {
+  margin: 2px 0 0;
+  font-size: 34px;
+  line-height: 1.05;
+  font-weight: 850;
+  letter-spacing: -1.4px;
+  color: #c90067;
+}
+
+.brand p {
+  margin: 5px 0 0;
+  font-size: 13px;
+  line-height: 1.3;
+  color: #57515b;
+  font-weight: 500;
+}
+
+/* HERO IMAGE */
+
+.hero-section {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  height: 165px;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3px;
+}
+
+.hero-bg {
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  bottom: 4px;
+  width: 90%;
+  height: 115px;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #ffe0ee, #fff0f7);
+}
+
+/* Keep the requested doctor-image styling unchanged */
+.hero-doctor {
+  position: relative;
+  z-index: 2;
+  width: 290px;
+  height: 165px;
+  object-fit: contain;
+  display: block;
+
+  background: #f3e0e3;
+  border-radius: 37px;
+  margin-left: -8px;
+  border: 2px solid pink;
+}
+
+/* WELCOME */
+
+.welcome {
+  width: 100%;
+  flex-shrink: 0;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.welcome h2 {
+  margin: 0;
+  font-size: 23px;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #101827;
+}
+
+.welcome p {
+  margin: 5px 0 0;
+  font-size: 13px;
+  line-height: 1.35;
+  color: #625b66;
+}
+
+/* ROLE CARDS CONTAINER */
+
+.roles {
+  width: 100%;
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* FOOTER */
+
+.priority {
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 12px;
+  padding-bottom: 2px;
+}
+
+.priority-line {
+  width: 45px;
+  height: 1px;
+  flex-shrink: 1;
+  background: #d69bb8;
+}
+
+.priority-content {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+  font-size: 11px;
+  font-weight: 600;
+  color: #62515d;
+}
+
+.shield {
+  width: 25px;
+  height: 25px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #bd1168;
+  border-radius: 8px;
+  color: #bd1168;
+  background: rgba(255, 255, 255, 0.65);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* BOTTOM WAVES */
+
+.bottom-waves {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.wave {
+  position: absolute;
+  left: -10%;
+  width: 120%;
+  border-radius: 50%;
+}
+
+.wave-1 {
+  height: 50px;
+  bottom: -38px;
+  background: #ffd5e7;
+  transform: rotate(-2deg);
+}
+
+.wave-2 {
+  height: 42px;
+  bottom: -35px;
+  background: #ffe9f2;
+  transform: rotate(2deg);
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 390px) {
+  .role-page {
+    height: auto;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .role-page-inner {
+    height: auto;
+    min-height: 100dvh;
+    overflow: visible;
+    padding: 7px 10px 16px;
+  }
+
+  .heart-logo {
+    width: 44px;
+    height: 37px;
+  }
+
+  .heart-logo span {
+    font-size: 42px;
+  }
+
+  .heartbeat {
+    font-size: 17px;
+  }
+
+  .brand h1 {
+    font-size: 28px;
+    letter-spacing: -1px;
+  }
+
+  .brand p {
+    margin-top: 3px;
+    font-size: 10px;
+  }
+
+  .hero-section {
+    height: 112px;
+    margin-top: 2px;
+  }
+
+  .hero-bg {
+    width: 90%;
+    height: 78px;
+  }
+
+  .hero-doctor {
+    width: 215px;
+    height: 120px;
+  }
+
+  .welcome {
+    margin-bottom: 8px;
+  }
+
+  .welcome h2 {
+    font-size: 19px;
+  }
+
+  .welcome p {
+    margin-top: 3px;
+    font-size: 11px;
+  }
+
+  .roles {
+    flex: 0 0 auto;
+    gap: 9px;
+  }
+
+  .priority {
+    margin-top: 12px;
+    gap: 5px;
+  }
+
+  .priority-line {
+    width: 32px;
+  }
+
+  .priority-content {
+    font-size: 9px;
+    gap: 5px;
+  }
+
+  .shield {
+    width: 23px;
+    height: 23px;
+    font-size: 12px;
+  }
+}
+
+/* SHORT SCREENS */
+
+@media (max-height: 650px) {
+  .role-page {
+    height: auto;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .role-page-inner {
+    height: auto;
+    min-height: 100dvh;
+    overflow: visible;
+    padding-top: 5px;
+  }
+
+  .heart-logo {
+    width: 40px;
+    height: 34px;
+  }
+
+  .heart-logo span {
+    font-size: 38px;
+  }
+
+  .heartbeat {
+    font-size: 16px;
+  }
+
+  .brand h1 {
+    font-size: 27px;
+  }
+
+  .brand p {
+    font-size: 9px;
+  }
+
+  .hero-section {
+    height: 100px;
+  }
+
+  .hero-doctor {
+    width: 170px;
+    height: 92px;
+  }
+
+  .hero-bg {
+    height: 68px;
+  }
+
+  .welcome {
+    margin-bottom: 8px;
+  }
+
+  .welcome h2 {
+    font-size: 17px;
+  }
+
+  .welcome p {
+    font-size: 10px;
+  }
+
+  .roles {
+    flex: 0 0 auto;
+  }
+}
+
+/* TABLET */
+
+@media (min-width: 601px) {
+  .role-page-inner {
+    max-width: 900px;
+    padding: 18px 25px 20px;
+  }
+
+  .heart-logo {
+    width: 65px;
+    height: 54px;
+  }
+
+  .heart-logo span {
+    font-size: 60px;
+  }
+
+  .brand h1 {
+    font-size: 45px;
+  }
+
+  .brand p {
+    font-size: 16px;
+  }
+
+  .hero-section {
+    height: 180px;
+  }
+
+  .hero-doctor {
+    width: 320px;
+    height: 180px;
+  }
+
+  .hero-bg {
+    width: 65%;
+    height: 125px;
+  }
+
+  .welcome h2 {
+    font-size: 29px;
+  }
+
+  .welcome p {
+    font-size: 16px;
+  }
+
+  .roles {
+    flex-direction: row;
+    gap: 18px;
+  }
+
+  .priority {
+    margin-top: 10px;
+  }
+}
+
+/* DESKTOP */
+
+@media (min-width: 1025px) {
+  .role-page-inner {
+    max-width: 1050px;
+    padding: 15px 35px 20px;
+  }
+
+  .hero-section {
+    height: 155px;
+  }
+
+  .hero-doctor {
+    width: 275px;
+    height: 155px;
+  }
+
+  .hero-bg {
+    width: 52%;
+    height: 105px;
+  }
+
+  .roles {
+    flex: 0 0 180px;
+  }
+}
+
+
+
+
+
+
+/* .role-page,
 .role-page * {
   box-sizing: border-box;
 }
@@ -541,7 +1042,7 @@
   border-radius: 37px;
   margin-left: -8px;
   border: 2px solid pink;
-}
+} */
 
 
 
@@ -554,31 +1055,31 @@
 /* Layout fixes — existing hero-doctor styling stays unchanged */
 
 /* Prevent flex children from overflowing their parent */
-.brand,
+/* .brand,
 .hero-section,
 .welcome,
 .roles,
 .priority {
   min-width: 0;
-}
+} */
 
 /* Keep the hero image and background centered */
-.hero-section {
+/* .hero-section {
   isolation: isolate;
 }
 
 .hero-bg {
   left: 50%;
   transform: translateX(-50%);
-}
+} */
 
 /* Allow role cards to shrink without forcing overflow */
-.roles {
+/* .roles {
   flex-shrink: 1;
-}
+} */
 
 /* Short screens: make the page scroll if content needs more room */
-@media (max-height: 650px) {
+/* @media (max-height: 650px) {
   .role-page {
     height: auto;
     min-height: 100dvh;
@@ -598,10 +1099,10 @@
   .bottom-waves {
     position: fixed;
   }
-}
+} */
 
 /* Avoid horizontal overflow on small phones */
-@media (max-width: 390px) {
+/* @media (max-width: 390px) {
   .role-page-inner {
     width: 100%;
   }
@@ -609,12 +1110,12 @@
   .roles {
     width: 100%;
   }
-}
+} */
 
 
 
 /* Mobile-only role layout fix */
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .role-page {
     height: auto;
     min-height: 100dvh;
@@ -659,6 +1160,6 @@
   .bottom-waves {
     pointer-events: none;
   }
-}
+} */
 
 
